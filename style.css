@@ -18,16 +18,67 @@ background-repeat: repeat-x,repeat-x,repeat-y,repeat-y,no-repeat;
 background-position: bottom,top, right, left,50% 50%;
 background-size: 1000px 400px,50px 100px,50px 50px,50px 50px,596px 380px;
 
+}
 
 
+/* pseudo element */
+.services-item {
+  display: flex;
+  align-items: center;
+}
 
 
+.services-item::before{
+  content: '';
+  background-image: url(./img/chmura.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
 
+  display: none;
 
+  width: 140px;
+  height: 120px;
 
+  margin-right: 10px;
+}
 
+.services-item::after{
+  content: '';
+  background-image: url(./img/chmura.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
 
+  display: block;
 
+  width: 140px;
+  height: 120px;
 
+  margin-right: 10px;
+}
+.services-item:hover::before{
+ 
+  cursor: pointer;
+
+  display: block;
+}
+.services-item:hover::after{
+  background-color: blue;
+  cursor: pointer;
+}
+
+/* first-letter */
+.text::first-letter{
+  font-size: 100px;
+  background-color: yellow;
+}
+/* selecton */
+::selection{
+  background-color: red;
+  color: black;
+}
+/* first-line */
+.text::first-line{
+  font-size: 70px;
+color: green;
 
 }
